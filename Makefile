@@ -7,6 +7,9 @@ AR = ar rcs
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
 clean:
 	rm -rf $(OBJS)
 

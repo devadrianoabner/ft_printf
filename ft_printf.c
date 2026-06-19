@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_prinf(const char *, ...)
 {
@@ -7,5 +7,5 @@ int	ft_prinf(const char *, ...)
 
 int	main(void)
 {
-	ft_printf("Hello Wrold")
+	ft_printf("Hello Wrold");
 }

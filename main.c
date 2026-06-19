@@ -2,5 +2,6 @@
 
 int	main(void)
 {
-	ft_printf("Hello Wrold")
+	ft_printf("Hello Wrold");
+    return (0);
 }

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_prinf(const char *, ...)
+int	ft_printf(const char *, ...)
 {
 	return (0);
 }

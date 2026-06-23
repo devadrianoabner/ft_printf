@@ -6,18 +6,17 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:23:32 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/22 15:23:40 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/23 16:20:28 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
-	int	num_bytes;
-	int	i;
-	int	c;
+	int		num_bytes;
+	int		i;
 
 	i = 0;
 	num_bytes = 0;
@@ -27,12 +26,7 @@ int	ft_printf(char const *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c')
-			{
-				c = va_arg(args, int);
-				num_bytes = num_bytes + write(1, &c, 1);
-			}
-
+			num_bytes += dispatch_convertions(format[i], args);
 		}
 		else
 		num_bytes = num_bytes + write(1, &format[i], 1);

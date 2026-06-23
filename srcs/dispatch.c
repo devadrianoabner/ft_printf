@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 20:09:28 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/23 16:43:48 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/23 20:07:30 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	dispatch_convertions(char format_char, va_list args)
 	dispatch['i'] = &handle_int;
 	dispatch['u'] = &handle_int;
 	dispatch['p'] = &handle_ptr;
-	dispatch['x'] = &handle_hex;
-	dispatch['X'] = &handle_hex;
+	dispatch['x'] = &handle_hex_lower;
+	dispatch['X'] = &handle_hex_upper;
 	if (dispatch[(unsigned char)format_char] == NULL)
 		return (0);
 	return (dispatch[(unsigned char)format_char](args));

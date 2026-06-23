@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:27:42 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/23 15:38:16 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/23 19:15:37 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 int	handle_str(va_list args)
 {
-	(void)args;
-	return (0);
+	char	*str;
+	str = va_arg(args, char *);
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
 }

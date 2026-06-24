@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:24:19 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/24 13:15:27 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/24 13:23:05 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ int	main(void)
 	printf("Valor retornado do ft_printf: %i\n", returns);
 	returns = printf("Hello Wrold %p\n", &returns);
 	ft_printf("Valor retornado do printf: %i\n\n", returns);
-	return (0);
 
 	/// TEST x ///
 	ft_printf(" /// TEST x\n\n///");
@@ -78,9 +77,10 @@ int	main(void)
 
 	/// TEST X ///
 	ft_printf(" /// TEST X\n\n///");
-	returns = ft_printf("Hello Wrold %x\n", -27389173);
+	returns = ft_printf("Hello Wrold %X\n", -27389173);
 	printf("Valor retornado do ft_printf: %i\n", returns);
-	returns = printf("Hello Wrold %x\n", -27389173);
+	returns = printf("Hello Wrold %X\n", -27389173);
 	ft_printf("Valor retornado do printf: %i\n\n", returns);
+		return (0);
 }
 // cc -Wall -Wextra -Werror main.c libftprintf.a -o test_printf

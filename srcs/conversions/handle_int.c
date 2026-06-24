@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:27:24 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/24 13:01:13 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/24 13:20:24 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	put_u_nbr_and_count(unsigned long long nbr)
 
 	count = 0;
 	if (nbr >= 10)
-		count += putnbr_u_and_count(nbr / 10);
+		count += put_u_nbr_and_count(nbr / 10);
 	c = (nbr % 10) + '0';
 	count += write(1, &c, 1);
 	return (count);

@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 15:27:24 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/23 19:46:50 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/24 11:49:30 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static int	putnbr_and_count(long long nbr)
 {
 	char	c;
-	int	count;
-	
+	int		count;
+
 	count = 0;
 	if (nbr < 0)
 	{

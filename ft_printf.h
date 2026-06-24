@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:23:51 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/23 20:08:05 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/24 12:56:50 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ int	handle_hex_lower(va_list args);
 int	handle_hex_upper(va_list args);
 int	handle_percent(va_list args);
 int	handle_ptr(va_list args);
+int	handle_int_unsigned(va_list args);
 #endif

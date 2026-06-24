@@ -6,7 +6,7 @@
 /*   By: adrianda <adrianda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:23:32 by adrianda          #+#    #+#             */
-/*   Updated: 2026/06/23 16:20:28 by adrianda         ###   ########.fr       */
+/*   Updated: 2026/06/24 16:49:41 by adrianda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(char const *format, ...)
 	int		num_bytes;
 	int		i;
 
+	if (!format)
+		return (-1);
 	i = 0;
 	num_bytes = 0;
 	va_start(args, format);
@@ -26,6 +28,8 @@ int	ft_printf(char const *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+				break ;
 			num_bytes += dispatch_convertions(format[i], args);
 		}
 		else
